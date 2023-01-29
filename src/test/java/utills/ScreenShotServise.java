@@ -1,6 +1,6 @@
 package utills;
 
-import driver.DriverSingleton;
+import driver.InitDriver;
 import io.qameta.allure.Attachment;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
@@ -12,7 +12,7 @@ public class ScreenShotServise {
     @Attachment
     public static byte[] saveScreenshot() {
         log.error("Make screenshot");
-        return ((TakesScreenshot) DriverSingleton.getDriver()).getScreenshotAs(OutputType.BYTES);
+        return ((TakesScreenshot) InitDriver.initDriver("chrome")).getScreenshotAs(OutputType.BYTES);
     }
 
 }

@@ -25,25 +25,25 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult arg0) {
-        log.error(arg0.getName()+" TEST CASE FAILED");
+        log.error(arg0.getName() + " TEST CASE FAILED");
         ScreenShotServise.saveScreenshot();
     }
 
     @Override
     public void onTestSkipped(ITestResult arg0) {
-        log.info(arg0.getName()+" test case SKIPPED");
+        log.info(arg0.getName() + " test case SKIPPED");
 
     }
 
     @Override
     public void onTestStart(ITestResult arg0) {
-        log.info(arg0.getName()+" test case STARTED");
+        log.info(arg0.getName() + " test case STARTED");
 
     }
 
     @Override
     public void onTestSuccess(ITestResult arg0) {
-        log.info(arg0.getName()+" test case SUCCESS");
+        log.info(arg0.getName() + " test case SUCCESS");
 
     }
 }
